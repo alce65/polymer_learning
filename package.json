@@ -1,0 +1,23 @@
+{
+  "name": "polymer_learning",
+  "version": "1.0.0",
+  "description": "Web Components con Polymer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Alejandro Cerezo",
+  "license": "ISC",
+  "dependencies": {
+    "@polymer/polymer": "^3.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alce65/polymer_learning.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alce65/polymer_learning/issues"
+  },
+  "homepage": "https://github.com/alce65/polymer_learning#readme"
+}
