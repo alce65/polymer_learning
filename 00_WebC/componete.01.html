@@ -1,0 +1,41 @@
+<!-- En su implementación inicial, 
+    los Web Components se creaban en un fichero HTML,
+    utilizando las 4 especificaciones estandar del W3C 
+    - HTML Imports
+    - HTML Templates
+    - Custom Elements
+    - ShadowDOM
+-->
+
+    <template id='tmp-primero'>
+        <style>
+            p {color: brown}
+        </style>
+        <p>Escrito desde un template d</p>
+    </template>
+
+    <div>En un div</div>
+
+    <script>
+        class PrimerComponente extends HTMLElement{
+            constructor() {
+                super()
+                this.user = 'Pepe'
+                this.attachShadow({mode: 'open'}).innerHTML = `
+                <div>
+                    <h2>Probando un componente en el fichero componente.html</h2>
+                    <p>Hola ${this.user}</p>
+                </div>`
+                
+                // acceso al template una vez importado el fichero
+                const oImport = document.querySelector('link[rel="import"]').import;
+                this.shadowRoot.innerHTML += 
+                    oImport.querySelector('#tmp-primero').innerHTML
+            }
+        }
+
+        customElements.define('app-primero', PrimerComponente)
+    </script>
+
+
+
