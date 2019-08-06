@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Componente Polymer</title>
+</head>
+<body>
+
+	<template id='tmp-prueba'>
+		<style>
+			p {color: brown}
+		</style>
+			<p>Componente desde un template</p>
+	</template>
+
+	<script type="module">
+		import {PolymerElement} from '../node_modules/@polymer/polymer/polymer-element.js';
+
+		class PruebaComponente extends PolymerElement {
+
+			constructor() {
+				super();
+			}
+
+
+			static get template() {
+				return document.querySelector('#tmp-prueba');
+			}
+
+		}
+
+		customElements.define('prueba-componente', PruebaComponente);
+	</script>
+	
+	<prueba-componente></prueba-componente>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- <link rel="import" href="../bower_components/polymer/polymer-element.html"> -->
+
+<dom-module id="mi-componente">
+	<template>
+		<style>
+			:host {
+				display: block
+			}
+			h2 {color: brown}
+		</style>
+		<h2>Componente Polymer</h2>
+	</template>
+
+	<script type="module">
+		import { PolymerElement } from '../node_modules/@polymer/polymer/polymer-element.js'
+		/**
+		 * `LowerCaseDashedName` Description
+		 *
+		 * @summary ShortDescription.
+		 * @customElement
+		 * @polymer
+		 * @extends {Polymer.Element}
+		 */
+		class MiComponente extends PolymerElement {
+			/**
+			 * String providing the tag name to register the element under.
+			 */
+			static get is() {
+				return 'mi-componente';
+			}
+
+		}
+
+		customElements.define(MiComponente.is, MiComponente);
+	</script>
+</dom-module>
