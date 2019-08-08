@@ -10,6 +10,16 @@
   "author": "Alejandro Cerezo",
   "license": "ISC",
   "dependencies": {
+    "@polymer/iron-fit-behavior": "^3.0.1",
+    "@polymer/paper-button": "^3.0.1",
+    "@polymer/paper-checkbox": "^3.1.0",
+    "@polymer/paper-dropdown-menu": "^3.0.1",
+    "@polymer/paper-input": "^3.0.2",
+    "@polymer/paper-item": "^3.0.1",
+    "@polymer/paper-listbox": "^3.0.1",
+    "@polymer/paper-radio-button": "^3.0.1",
+    "@polymer/paper-radio-group": "^3.0.1",
+    "@polymer/paper-toast": "^3.0.1",
     "@polymer/polymer": "^3.3.0"
   },
   "repository": {
