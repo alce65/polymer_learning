@@ -28,4 +28,25 @@ Ejemplos básicos
 - Incorporación a la página
 - Creación del comportamiento del componente con JS estándar
 
-Estos componentes se incorporan a un formulrio que utiliza mecanismos de validación y confirmación del envio programados con anterioridad al uso de componentes, para comprobar como se pueden incorporar estos en una aplicación "genérica"
+Estos componentes se incorporan a un formulrio que utiliza mecanismos de validación y confirmación del envio programados con anterioridad al uso de componentes, para comprobar como se pueden incorporar estos en una aplicación "genérica".
+
+## 3. Uso de polymer CLI ##
+
+Instalación global:
+
+```shell
+npm install -g polymer-cli
+```
+
+Para utilizar el CLI en Windows 10, se activa un bash del subsystema de lynux, e.g. con la distribución de Ubunto para Windows, y se instala nvm y NodeJS
+
+### Polymer 2 element ###
+
+Aun utiliza Bower como gestor de dependencias
+
+```shell
+npm install -g bower
+```
+
+Se crea un compenente ejemplo, con dos propiedades que se usan en el template y que pueden ser inicializadas al "consumir" el componente.
+
