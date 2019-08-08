@@ -50,3 +50,8 @@ npm install -g bower
 
 Se crea un compenente ejemplo, con dos propiedades que se usan en el template y que pueden ser inicializadas al "consumir" el componente.
 
+### Polymer 3 element ###
+
+Se crea un compenente ejemplo similar, con  propiedades que se usan en el template y que pueden ser inicializadas al "consumir" el componente.
+
+Además se incorpora un elemento del catalogo, iron-collapse, y se le confiere funcionalidad utilizando los eventos de polymer. En el correspondiente controlador se utiliza el objeto evento.
