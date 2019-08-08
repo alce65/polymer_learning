@@ -55,3 +55,25 @@ Se crea un compenente ejemplo, con dos propiedades que se usan en el template y 
 Se crea un compenente ejemplo similar, con  propiedades que se usan en el template y que pueden ser inicializadas al "consumir" el componente.
 
 Además se incorpora un elemento del catalogo, iron-collapse, y se le confiere funcionalidad utilizando los eventos de polymer. En el correspondiente controlador se utiliza el objeto evento.
+
+## 4. Creación de elementos desde cero ##
+
+Se aprovechan los snipets instalados en VSC que definen la estructura del componente y lo registran.
+
+Se utiliza el componente desde un index
+
+Se define la apariencia del componente usando los selectores
+
+- :host{}
+- :host([atributos])
+
+Se utilizan variables con valores por defecto que pueden luego modificarse desde clases externas
+
+Se define la propiedad visible (Boolean), para la cual existe una clase que hace visible el componente.
+
+En el método ready se asigna y crea el manejador de evento
+que cambia el valor de la propiedad anterior.
+
+En el index.html hay un botón que permite cambiar el estado 'visible' del componente
+
+También hay un handler del evento visible-changed notificado por el componente hijo.

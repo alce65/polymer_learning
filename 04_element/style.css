@@ -1,0 +1,17 @@
+body {
+    margin: 2rem;
+}
+
+section {
+    border: 1px solid gainsboro;
+    padding: 1rem 2rem;
+}
+
+div {
+    margin: 1rem 0;
+}
+
+banner-message.blue {
+    --back-color:  skyblue;
+    --front-color: blue;
+}
