@@ -1,0 +1,7 @@
+{
+  "name": "libros",
+  "short_name": "libros",
+  "description": "Aplicación básica com Polymer 3",
+  "start_url": "/",
+  "display": "standalone"
+}

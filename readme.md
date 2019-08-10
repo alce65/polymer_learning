@@ -77,3 +77,30 @@ que cambia el valor de la propiedad anterior.
 En el index.html hay un botón que permite cambiar el estado 'visible' del componente
 
 También hay un handler del evento visible-changed notificado por el componente hijo.
+
+## 5. Creación de una aplicación desde polymer cli ##
+
+Desde polimer init es posible crear una app,
+con un scaffoldig algo mas complejo que el de un elemnto:
+
+- un fichero index que consume el componente
+- un componente en la carpeta src
+- un html con los tests del componente en la carpeta
+
+### Componente lbr-autor ###
+
+Presentador de los datos de un autor
+
+- componentes del catálogo: iron-collapse, iron-icon, iron-icons
+- respuesta a varios eventos click
+- uso de propiedades computadas
+- atributo class$ asociado a una variable
+
+### Componente lbr-app ### 
+
+Controlador de una serie de autores,
+utilizando de forma iterativa el componente anterior
+
+- propiedad de tipo array
+- característica reflectToAttribute en una propiedad
+- template dom-repeat

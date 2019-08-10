@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>libros</title>
+    <meta name="description" content="Aplicación básica com Polymer 3">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <script type="module" src="/src/lbr-app/lbr-app.js" crossorigin></script>
+  </head>
+  <body>
+<!--     <lbr-app></lbr-app> -->
+
+
+    <script>
+      let lbrApp = document.createElement('lbr-app')
+      document.body.appendChild(lbrApp)
+    </script>
+  </body>
+</html>
