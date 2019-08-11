@@ -96,7 +96,7 @@ Presentador de los datos de un autor
 - uso de propiedades computadas
 - atributo class$ asociado a una variable
 
-### Componente lbr-app ### 
+### Componente lbr-app ###
 
 Controlador de una serie de autores,
 utilizando de forma iterativa el componente anterior
@@ -104,3 +104,59 @@ utilizando de forma iterativa el componente anterior
 - propiedad de tipo array
 - característica reflectToAttribute en una propiedad
 - template dom-repeat
+
+## 6. Data binding ##
+
+Each Polymer element manages its own data model.
+The model is the elements properties, and data bindings provide a way to link
+the data that is in the properties to the elements local dom structure.
+
+The type of binding controls how the data flows from the markup to and from the model.
+
+- One-way binding: [[]] -> from the model (properties) to the dom (markup)
+- Two-way binding: {{}} -> from where the changes originates, in any direction
+
+Polymer elements can define what are called computed properties,
+and these are properties whose value is derived from some kind of calculation.
+
+### One-way binding ###
+
+```html
+<output id="out-temp">[[temperature]]</output>
+```
+
+Cualquier cambio en la propiedad temperature del modelo se refleja inmediatamente en el html
+
+In the back, polymer is generating a setter for this property and then firing an event which then goes through the data system and updates the property in the layout.
+
+### Two-way binding ###
+
+```html
+<input type="range" value= {{temperature::change}}>
+```
+
+The control is acting as the source of the data change,
+which pushes the new data into the model and
+then that property change gets reflected back down in the html.
+
+The input element is a native browser element.
+So, we have to tell Polymer what event to listen to on this element in order to be notified that the data has changed. So to do that we need to decorate this data binding with two colons and then the name of the event that we want Polymer to listen to.
+
+### Computed properties ###
+
+In a propertie, attribute computed is going to refer to a function
+that will be called in order to compute this property.
+
+```js
+temp: Number,
+tempFahrenheit: {
+        type: Number,
+        computed: '_calcFahrenheit(temperature)' 
+},
+```
+
+When the temp property changes, it's going to trigger the one-way binding and because tempFahrenheit depends on the value of temp, it will also be updated and will trigger the other one-way binding up here in the layout.
+
+### Bind to an attribute ###
+
+To bind to an attribute, you need to use the dollar sign attribute in the name in the layout here and the reason for this is that Polymer will generate a call using the doms set attribute function when it sees a dollar sign on the attribute rather than doing a property assignment. And this also needs to be done for compatibility reasons on some browsers.
